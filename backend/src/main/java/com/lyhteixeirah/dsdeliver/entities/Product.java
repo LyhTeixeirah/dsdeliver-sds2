@@ -19,18 +19,18 @@ public class Product implements Serializable {
     private String name; 
     private Double price;
     private String description; 
-    private String image_Uri;
+    private String imageUri;
 
     public Product(){
     }
 
 
-    public Product(Long id, String name, Double price, String description, String image_Uri) {
+    public Product(Long id, String name, Double price, String description, String imageUri) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
-        this.image_Uri = image_Uri;
+        this.imageUri = imageUri;
     }
 
     public Long getId() {
@@ -65,12 +65,12 @@ public class Product implements Serializable {
         this.description = description;
     }
 
-    public String getImage_Uri() {
-        return image_Uri;
+    public String getImageUri() {
+        return imageUri;
     }
 
-    public void setImage_Uri(String image_Uri) {
-        this.image_Uri = image_Uri;
+    public void setImageUri(String imageUri) {
+        this.imageUri = imageUri;
     }
 
     @Override
