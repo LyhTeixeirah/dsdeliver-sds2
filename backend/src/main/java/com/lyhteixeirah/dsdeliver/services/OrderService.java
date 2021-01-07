@@ -8,6 +8,7 @@ import com.lyhteixeirah.dsdeliver.dto.OrderDTO;
 import com.lyhteixeirah.dsdeliver.dto.ProductDTO;
 import com.lyhteixeirah.dsdeliver.entities.Order;
 import com.lyhteixeirah.dsdeliver.entities.Product;
+import com.lyhteixeirah.dsdeliver.entities.enums.OrderStatus;
 import com.lyhteixeirah.dsdeliver.repositories.OrderRepository;
 import com.lyhteixeirah.dsdeliver.repositories.ProductRepository;
 
@@ -32,11 +33,19 @@ public class OrderService {
 
     @Transactional
     public OrderDTO insert(OrderDTO dto) {
-        Order order = new Order(null, dto.getAddress(), dto.getLatitude(), dto.getLatitude(), Instant.now() OrderStatus.PENDING);
+        Order order = new Order(null, dto.getAddress(), dto.getLatitude(), dto.getLatitude(), Instant.now(), OrderStatus.PENDING);
         for (ProductDTO p : dto.getProducts()){
             Product product = productRepository.getOne(p.getId());
             order.getProducts().add(product);
         }
+        order = repo.save(order);
+        return new OrderDTO(order);
+    }
+
+    @Transactional
+    public OrderDTO setDelivered(Long id) {
+        Order order = repo.getOne(id);
+        order.setStatus(OrderStatus.DELIVERED);
         order = repo.save(order);
         return new OrderDTO(order);
     }
