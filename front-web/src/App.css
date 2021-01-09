@@ -3,12 +3,22 @@
 :root {
   --primary-color: #da5c5c;
   --primary-hover-color: #a74b4b;
-  --dark-color: #263238;
+  --dark-color: #060607;
+  --dark-gray-color: #263238;
+  --secondary-color: #9E9E9E;
+  --light-color: #F5F5F5;
+}
+
+.dark {
+  --primary-color: #da5c5c;
+  --primary-hover-color: #d12626;
+  --dark-color-secondary: #263238;
   --secondary-color: #9E9E9E;
   --light-color: #F5F5F5;
 }
 
 html, body {
+  background-color: #ffffff;
   margin: 0;
   padding:0;
 }

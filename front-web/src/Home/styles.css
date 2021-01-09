@@ -18,7 +18,7 @@
     line-height: 58px;
     letter-spacing: -0.015em;
     color: var(--dark-color);
-    margin-bottom: 40px !important;
+    margin-bottom: 5px !important;
   }
   
   .home-subtitle {
@@ -31,9 +31,9 @@
   }
   
   .home-btn-order {
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    height: 70px;
+    background-color: var(--dark-color);
+    border-radius: 8px;
+    height: 60px;
     width: 235px;
     display: inline-block;
     display: flex;
@@ -51,7 +51,7 @@
   }
   
   .home-image svg {
-    width: 100% !important;
+    width: 80% !important;
   }
   
   @media only screen and (max-width: 768px) {
@@ -84,12 +84,13 @@
   
     .home-image svg {
       width: 80%;
+      height: 80%;
     }
   }
   
   @media (max-height: 700px) {
     .home-container {
-      height: auto;
-      margin-bottom: 30px;
+      height: 408px;
+      margin-bottom: 0px;
     }
   }
