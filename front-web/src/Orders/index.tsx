@@ -7,7 +7,6 @@ import { Product, OrderLocationData } from './types';
 import { fetchProducts, saveOrder } from '../api';
 import OrderLocation from './OrderLocation';
 import OrderSummary from './OrderSummary';
-import { checkIsSelected } from './helpers';
 import { toast } from 'react-toastify'
 
 
